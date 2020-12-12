@@ -12,7 +12,7 @@ def test():
     test_data_len = len(test_data_list)
     for i in range(test_data_len):
         file_name_str, class_num = KNN.file_process(test_data_list[i])
-        test_vector = KNN.img2vector('testDigits\\' + file_name_str)
+        test_vector = KNN.image_process('testDigits\\' + file_name_str)
         res = KNN.classify(test_vector, training_matrix, training_data_labels, 3)
         
         #if i%10 == 0:
